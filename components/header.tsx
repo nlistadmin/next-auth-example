@@ -8,7 +8,7 @@ import styles from "./header.module.css"
 export default function Header() {
   const { data: session, status } = useSession()
   const loading = status === "loading"
-
+  if(!loading) {console.log('session in header ', session)}
   return (
     <header>
       <noscript>

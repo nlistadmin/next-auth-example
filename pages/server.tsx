@@ -29,13 +29,14 @@ export default function ServerSidePage({ session }: { session: Session }) {
         The disadvantage of Server Side Rendering is that this page is slower to
         render.
       </p>
-      <pre>{JSON.stringify(session, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(session, null, 2)}</pre> */}
     </Layout>
   )
 }
 
 // Export the `session` prop to use sessions with Server Side Rendering
 export async function getServerSideProps(context: GetServerSidePropsContext) {
+  
   return {
     props: {
       session: await unstable_getServerSession(
