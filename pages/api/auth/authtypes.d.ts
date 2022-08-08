@@ -1,4 +1,7 @@
-interface credentials {
-    username: string!;
-    password: string!;
+interface User {
+    role?: string
+}
+
+interface DefaultSession {
+    role?: string
 }
