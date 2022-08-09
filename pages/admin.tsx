@@ -21,7 +21,7 @@ export async function getServerSideProps(context:any) {
 }
 
 
-export default function Page({session}) {
+export default function Page({session}:{session: DefaultSession}) {
   
   if(session && session.role==='admin') {
     return (
